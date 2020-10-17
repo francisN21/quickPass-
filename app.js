@@ -8,13 +8,17 @@ let emojis = [":)",":(",":-P","xD","UwU","¯\_(ツ)_/¯","(¬‿¬)","(• ε �
 var possibles = [];
 
 // parseInt makes the input into integer //
-var lenght = parseInt(prompt("How long do you want you password?"));
+// ask for user input //
+var lenght = parseInt(prompt("Please choose a how many characters you want for your password, between 8 - 128:"));
 
-if (length < 8 || length 128 || isNaN(length)){
+// if statement starts here
+if(!length) {
+    alert("Please enter a value");
+} else if (length < 8 || length > 128 || isNaN(length)){
     // stops the program if the value is under and over //
-    alert("wrong input!");
+    var lenght = parseInt(prompt("Choose between 8 - 128 ONLY"));
 }
-// continue //
+// continue once user input is correct //
 else{
     var charsTrue = confirm("Do you want Chars?");
     var numsTrue = confirm("Do you want Chars?");
