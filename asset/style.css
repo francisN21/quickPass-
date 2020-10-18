@@ -78,7 +78,7 @@ header {
   display: block;
   clear: both;
 }
-
+/* adjusted the button margin to center the buttons */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -89,7 +89,7 @@ header {
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
-  margin: 16px 16px 16px 20px;
+  margin: 16px 50px 16px 51px;
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
