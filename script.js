@@ -44,10 +44,8 @@ function generate() {
       }
       // returns the password to the text area
       // console.log(possibles);
-      console.log(pw, `password length: ${pw.length}`);
+      console.log(pw, `Vanilla Password: ${pw.length}`);
       // found out that this result has a password pattern depending on what category you wanted for your password
-      answer.textContent = pw;
-      console.log(rNum);
 
       // this function shuffles the result
       var arrayShuffle = function (arr) {
@@ -65,7 +63,7 @@ function generate() {
       // shuffler
       let newPass = arrayShuffle(rNum);
       // outputs the new Pass
-      console.log(newPass);
+      answer.textContent = pw;
 
   } else {
     alert("Choose between 8 - 128 ONLY");
