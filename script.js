@@ -25,10 +25,7 @@ function generate() {
       if (capitalTrue) { possibles.push(capital); }
       if (specialCharsTrue) { possibles.push(specialChars); }
       if (emojisTrue) { possibles.push(emojis); }
-      // password placeholder
-      var pw;
-      pw = [];
-
+      var pw = [];
       // rNum stores the password to be shuffled as the new password
       var rNum = [];
       // logic for the password generator
@@ -42,10 +39,8 @@ function generate() {
         }
       }
       // returns the password to the text area
-      // console.log(possibles);
       console.log(`Vanilla Password: ${pw} Password Length: ${pw.length}`);
       // found out that this result has a password pattern depending on what category you wanted for your password
-
       // this function shuffles the result
       var arrayShuffle = function (arr) {
         // Placeholder for the temporary and new location array 
@@ -62,11 +57,11 @@ function generate() {
       };
       // 4 iterations for more unique pass combination
       let newPass1 = arrayShuffle(rNum);
-      console.log("First Iteration: ",newPass1);
+      // console.log("First Iteration: ",newPass1);
       let newPass2 = arrayShuffle(newPass1);
-      console.log("First Iteration: ",newPass2);
+      // console.log("Second Iteration: ",newPass2);
       let newPass3 = arrayShuffle(newPass2);
-      console.log("First Iteration: ",newPass3);
+      // console.log("Third Iteration: ",newPass3);
       let newPass4 = arrayShuffle(newPass3);
 
       // Final Password
@@ -78,4 +73,16 @@ function generate() {
     alert("Choose between 8 - 128 ONLY");
   }
 }
+// since generate is only one time access I dont need to contain it to a variable
 document.querySelector("#generate").addEventListener("click", generate);
+
+// copy functionality
+var copyButton = document.querySelector("#copy");
+copyButton.addEventListener("click", function () {
+  answer.select();
+  document.execCommand("copy");
+  alert("copied to clipboard!");
+});
+
+
+
