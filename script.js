@@ -26,7 +26,6 @@ function generate() {
       if (specialCharsTrue) { possibles.push(specialChars); }
       if (emojisTrue) { possibles.push(emojis); }
       // password placeholder
-      console.log(possibles);
       var pw;
       pw = [];
 
@@ -44,7 +43,7 @@ function generate() {
       }
       // returns the password to the text area
       // console.log(possibles);
-      console.log(pw, `Vanilla Password: ${pw.length}`);
+      console.log(`Vanilla Password: ${pw} Password Length: ${pw.length}`);
       // found out that this result has a password pattern depending on what category you wanted for your password
 
       // this function shuffles the result
@@ -61,10 +60,19 @@ function generate() {
         return arr;
       };
       // shuffler
-      let newPass = arrayShuffle(rNum);
-      // outputs the new Pass
-      answer.textContent = pw;
+      let newPass1 = arrayShuffle(rNum);
+      console.log(newPass1);
+      let newPass2 = arrayShuffle(newPass1);
+      console.log(newPass2);
+      let newPass3 = arrayShuffle(newPass2);
+      console.log(newPass3);
+      let newPass4 = arrayShuffle(newPass3);
+      console.log(newPass4);
+      
 
+      // outputs the new Pass
+      answer.textContent = newPass4.join('');
+      console.log(`Shuffled Password: ${newPass4}`);
   } else {
     alert("Choose between 8 - 128 ONLY");
   }
