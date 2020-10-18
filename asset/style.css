@@ -42,6 +42,7 @@ header {
   padding: 30px 40px;
 }
 
+/*  added text area so that the text box fits nicely to the DIV */
 .textArea{
     width: 100%;
     height: 150px;
