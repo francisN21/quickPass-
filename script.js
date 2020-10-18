@@ -48,9 +48,10 @@ function generate() {
 
       // this function shuffles the result
       var arrayShuffle = function (arr) {
+        // Placeholder for the temporary and new location array 
         let newPos,
             temp;
-
+            // for loop for shuffle
         for (let i = arr.length - 1; i > 0; i--) {
           newPos = Math.floor(Math.random() * (i+1));
           temp = arr[i];
@@ -59,23 +60,22 @@ function generate() {
         }
         return arr;
       };
-      // shuffler
+      // 4 iterations for more unique pass combination
       let newPass1 = arrayShuffle(rNum);
-      console.log(newPass1);
+      console.log("First Iteration: ",newPass1);
       let newPass2 = arrayShuffle(newPass1);
-      console.log(newPass2);
+      console.log("First Iteration: ",newPass2);
       let newPass3 = arrayShuffle(newPass2);
-      console.log(newPass3);
+      console.log("First Iteration: ",newPass3);
       let newPass4 = arrayShuffle(newPass3);
-      console.log(newPass4);
-      
 
-      // outputs the new Pass
+      // Final Password
       answer.textContent = newPass4.join('');
-      console.log(`Shuffled Password: ${newPass4}`);
+      console.log(`Final Password: ${newPass4.join('')}`);
+      console.log("First Random: ",pw);
   } else {
+    // must input correct values.
     alert("Choose between 8 - 128 ONLY");
   }
 }
-
 document.querySelector("#generate").addEventListener("click", generate);
